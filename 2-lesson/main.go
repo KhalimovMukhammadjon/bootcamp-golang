@@ -1,6 +1,10 @@
 package main
 
-import "Muhammadjon/bootcamp/2-lesson/fizzbuzz"
+import (
+	"Muhammadjon/bootcamp/2-lesson/factorial"
+	"Muhammadjon/bootcamp/2-lesson/fizzbuzz"
+ 	"2-lesson/factorial"
+)
 
 //import "fmt"
 
@@ -17,5 +21,6 @@ func main() {
 	//FindTotal()
 	//FindEvenTotal()
 	//Factorial()
+	factorial.Factorial()
 	fizzbuzz.FizzBuzz()
 }

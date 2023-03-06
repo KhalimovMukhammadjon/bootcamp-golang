@@ -7,7 +7,7 @@ func Factorial() {
 	count := 1
 	fmt.Println("Enter number:")
 	fmt.Scanln(&a)
-	for i := 1; i <= 5; i++ {
+	for i := 1; i <= a; i++ {
 		count *= i
 	}
 	fmt.Println("Result:", count)

@@ -2,7 +2,6 @@ package fizzbuzz
 
 import "fmt"
 
-
 func FizzBuzz() {
 	var n int
 	fmt.Println("Enter number:")
