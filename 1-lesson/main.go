@@ -2,14 +2,15 @@ package main
 
 import (
 	// "1-lesson/lesson2"
-	"1-lesson/values"
+	// "1-lesson/values"
+	"Muhammadjon/bootcamp/1-lesson/values"
 	"fmt"
 )
 
 func main() {
-	
+
 	fmt.Println(values.Article)
-	values.NewValue(4)
+	values.BigNumber()
 
 	// var s uint8 = 255
 	// fmt.Print(s)

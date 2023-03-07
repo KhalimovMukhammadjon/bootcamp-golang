@@ -1,3 +1,3 @@
-module 2-lesson
+module Muhammadjon/bootcamp/2-lesson
 
 go 1.20

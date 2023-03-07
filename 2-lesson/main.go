@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Muhammadjon/bootcamp/2-lesson/factorial"
 	"Muhammadjon/bootcamp/2-lesson/fizzbuzz"
- 	"2-lesson/factorial"
+	"Muhammadjon/bootcamp/2-lesson/factorial"
+	"Muhammadjon/bootcamp/2-lesson/fibonacci"
 )
 
 //import "fmt"
@@ -23,4 +23,5 @@ func main() {
 	//Factorial()
 	factorial.Factorial()
 	fizzbuzz.FizzBuzz()
+	fibonacci.Fibonnacci()
 }
