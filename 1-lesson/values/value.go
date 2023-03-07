@@ -75,7 +75,7 @@ func BigNumber() {
 	var n1 int
 	arr := []int{}
 	// arr := num[0]
-	// for i := 0; i < len(num); i++ {
+	// for i := 0; i < len(arr); i++ {
 	// 	fmt.Println(num,arr)
 	// }
 	for num > 0 {

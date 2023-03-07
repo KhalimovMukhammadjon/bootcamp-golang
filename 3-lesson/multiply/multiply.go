@@ -8,7 +8,7 @@ func Multiply() {
 	fmt.Println("Enter number:")
 	fmt.Scanln(&s)
 	if s <= 15 {
-		for i := 1; i <= s; i++ {
+		for i := 1; i <= 15; i++ {
 			fmt.Printf("--------------------\n")
 			for k := 1; k <= i; k++ {
 				result = i * k

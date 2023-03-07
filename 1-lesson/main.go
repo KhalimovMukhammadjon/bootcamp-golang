@@ -10,8 +10,6 @@ import (
 func main() {
 
 	fmt.Println(values.Article)
-	values.BigNumber()
-
 	// var s uint8 = 255
 	// fmt.Print(s)
 	// fmt.Print(s)
