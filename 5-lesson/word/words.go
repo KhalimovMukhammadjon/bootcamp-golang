@@ -14,25 +14,6 @@ func Word(s1, s2 string) {
 	}
 }
 
-// func SameWord(word1, word2 string) string {
-// 	//"abcde","cdegh"
-// 	for i := 0; i < len(word2); i++ {
-// 		//v := string(word2[0])
-
-// 		if word2[0] == word1[i] {
-// 			fmt.Println(string(word1[i:]))
-// 			// word2[:len(copy)]
-// 			res := string(word1[i:])
-// 			if res == word2[:len(res)] {
-// 				return word1[:i] + word2
-// 			}
-// 		} else {
-// 			return word1 + word2
-// 		}
-// 	}
-// 	return word1 + word2
-// }
-
 //"abcde","cdegh"
 func SameWord(a, b string) string {
 	for i := 0; i < len(a)-1; i++ {

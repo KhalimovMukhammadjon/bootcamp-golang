@@ -4,8 +4,8 @@ import "fmt"
 
 func Value() {
 	var count = -1
-	var word string = "Classic"
-	k := "s"
+	var word string = "There are"
+	k := "r"
 	for i := 0; i < len(word); i++ {
 		if string(word[i]) == k {
 			count++
