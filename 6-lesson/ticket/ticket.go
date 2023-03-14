@@ -88,13 +88,5 @@ func Ticket() {
 			TicketCount: remains,
 		},
 	}
-
-	//u1 = append(u1,)
-	//Users = append(Users, u1)
-
-	// UserData = append(UserData, firstName, lastName)
-	// fmt.Println(UserData,firstNames)
-	fmt.Println(firstNames)
-
-	//sendTicket(0,"","","")
+	fmt.Println(firstNames,"User",u1)
 }
