@@ -8,5 +8,6 @@ import (
 func main(){
 	//maps.CreateMap()
 	//cars.NewCar("")
-	ticket.NewTicket()
+	//ticket.NewTicket()
+	ticket.CreateUser()
 }

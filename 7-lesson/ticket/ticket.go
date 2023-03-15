@@ -47,7 +47,7 @@ func NewTicket() {
 		fmt.Println(result)
 		firstNames = append(firstNames, firstName)
 		//v := GetFirstNames()
-		Bookings = append(Bookings, )
+		Bookings = append(Bookings, User{})
 
 		allNames = append(allNames, firstName, lastName, email)
 		fmt.Println("All names", allNames)
@@ -61,17 +61,17 @@ func NewTicket() {
 			fmt.Println("You can buy it", ticketNum)
 		}
 	}
-	GetFirstNames()
+	//GetFirstNames()
 	fmt.Println("Name", firstNames)
 	fmt.Println("All names", allNames)
 }
 
-func GetFirstNames() []string {
-	firstName := []string{}
-	for _, booking := range Bookings {
-		firstName = append(firstName, booking.FirstName)
-		//fmt.Printf("%v.%v\n",k,booking.FirstName)
-		fmt.Println(firstName)
-	}
-	return firstName
-}
+// func GetFirstNames() []string {
+// 	firstName := []string{}
+// 	for _, booking := range Bookings {
+// 		firstName = append(firstName, booking.FirstName)
+// 		//fmt.Printf("%v.%v\n",k,booking.FirstName)
+// 		fmt.Println(firstName)
+// 	}
+// 	return firstName
+// }
