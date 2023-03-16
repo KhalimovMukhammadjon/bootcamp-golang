@@ -1,4 +1,4 @@
-package main
+package cars
 
 import (
 	"encoding/json"
@@ -12,7 +12,7 @@ type Car struct {
 	Price int    `json:"price"`
 }
 
-func main() {
+func CreateCar() {
 	data, err := ioutil.ReadFile("data.json")
 	if err != nil {
 		fmt.Println("Error", err)
@@ -59,7 +59,7 @@ func main() {
 	}
 
 	// write json data to a file
-	err = ioutil.WriteFile("data.json", data, 0644)
+	err = ioutil.WriteFile("cars/data.json", data, 0644)
 	if err != nil {
 		fmt.Println("Error writing JSON to file:", err)
 		return

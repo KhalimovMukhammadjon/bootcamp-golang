@@ -1,4 +1,4 @@
-package main
+package food
 
 import (
 	"encoding/json"
@@ -20,7 +20,7 @@ type NewFood struct {
 
 var newArr []string
 
-func Order() {
+func Menu() {
 
 	var menu, selectFood string
 	var selectNum int
@@ -30,7 +30,7 @@ func Order() {
 	fmt.Println("1.Menu\n2.Receipt\n3.Exit")
 	fmt.Scanln(&menu)
 
-	data, err := ioutil.ReadFile("data.json")
+	data, err := ioutil.ReadFile("food/data.json")
 	if err != nil {
 		fmt.Println("Error reading file:", err)
 		return
@@ -101,7 +101,7 @@ func Order() {
 
 var total []int
 
-func main() {
-	Order()
+func Order() {
+	Menu()
 	fmt.Println("Total", newArr)
 }
