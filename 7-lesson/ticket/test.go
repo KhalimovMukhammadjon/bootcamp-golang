@@ -55,7 +55,7 @@ func CreateUser() {
 		People = append(People, person)
 	}
 	for i := range People {
-		//info[People[i]] = 
+		//info[People[i]] =
 		fmt.Println("i", i)
 	}
 	fmt.Println("First", People)

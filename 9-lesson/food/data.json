@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "name":"Hamburger",
+        "price":22000
+    },
+    {
+        "id":2,
+        "name":"Lavash",
+        "price":26000
+    },
+    {
+        "id":3,
+        "name":"Haggi",
+        "price":27000
+    },
+    {
+        "id":4,
+        "name":"Club-Sandwich",
+        "price":82000
+    },
+    {
+        "id":5,
+        "name":"Hot-dog",
+        "price":21000
+    }
+]
