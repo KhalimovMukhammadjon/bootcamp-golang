@@ -45,12 +45,6 @@ func ChangeMorse() {
 	count := ""
 
 	for i := 0; i < len(str); i++ {
-		// for _, v := range morseAlfa {
-		// 	if string(str[i]) == v {
-		// 		fmt.Println(v)
-		// 	}
-		// 	count += v
-		// }
 		if morseAlfa[string(str[i])] != "" {
 			count += morseAlfa[string(str[i])]
 		}

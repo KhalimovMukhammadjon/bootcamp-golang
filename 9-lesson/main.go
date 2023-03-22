@@ -1,9 +1,9 @@
 package main
 
 import (
-	//"Muhammadjon/bootcamp/9-lesson/food"
-	//"Muhammadjon/bootcamp/9-lesson/hour"
-	"Muhammadjon/bootcamp/9-lesson/morse"
+	"Muhammadjon/bootcamp/9-lesson/food"
+	// "Muhammadjon/bootcamp/9-lesson/morse"
+	//"Muhammadjon/bootcamp/9-lesson/roman"
 )
 
 // func main() {
@@ -13,9 +13,9 @@ import (
 // 	food.Order()
 // }
 
-func main(){
-	//main.Order()
-	//food.Order()
-	//hour.FindHour()
-	morse.ChangeMorse()
+func main() {
+	food.Order()
+
+	//roman.ChangeRoman()
+	//roman.RomanToInt()
 }
