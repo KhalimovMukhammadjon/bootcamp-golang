@@ -1,7 +1,8 @@
 package main
 
 import (
-	"Muhammadjon/bootcamp/9-lesson/food"
+	//"Muhammadjon/bootcamp/9-lesson/food"
+	"Muhammadjon/bootcamp/9-lesson/roman"
 	// "Muhammadjon/bootcamp/9-lesson/morse"
 	//"Muhammadjon/bootcamp/9-lesson/roman"
 )
@@ -14,7 +15,8 @@ import (
 // }
 
 func main() {
-	food.Order()
+	//food.Order()
+	roman.ChangeRoman()
 
 	//roman.ChangeRoman()
 	//roman.RomanToInt()

@@ -7,7 +7,7 @@ import (
 )
 
 type Food struct {
-	ID    int    `"json:"id"`
+	ID    int    `json:"id"`
 	Name  string `json:"name"`
 	Price int    `json:"price"`
 }
@@ -18,9 +18,9 @@ type Basket struct {
 	Sum     int      `json:"sum"`
 }
 
-var newArr, basketArr []string
+var newArr []string
 var orderId, sum, result int //added result
-var foods []string
+//var foods []string
 
 func Menu() {
 
@@ -54,18 +54,18 @@ func Menu() {
 		return
 	}
 
-	var basket2 []Basket
-	err = json.Unmarshal(data1, &basket2)
+	var varBasket []Basket
+	err = json.Unmarshal(data1, &varBasket)
 	if err != nil {
 		fmt.Println("Error reading file:", err)
 		return
 	}
 
 	// This code adds plus 1 to id
-	if len(basket2) == 0 {
+	if len(varBasket) == 0 {
 		orderId = 1
-	} else if len(basket2) != 0 {
-		orderId = len(basket2) + 1
+	} else if len(varBasket) != 0 {
+		orderId = len(varBasket) + 1
 	}
 
 	switch menu {
@@ -82,11 +82,15 @@ func Menu() {
 				if food[i].Name == selectFood {
 					fmt.Println("How much do you want to buy:")
 					fmt.Scanln(&selectNum)
-					result = food[i].Price * selectNum
-					//fmt.Println("Total", result)
+					result += food[i].Price * selectNum
 					//fmt.Printf("%v %v X %v = %v", selectFood, selectNum, food[i].Price, result)
-					Total := fmt.Sprintf("%v %v X %v = %v", selectFood, selectNum, food[i].Price, result)
+					//Total := fmt.Sprintf("%v %v X %v = %v", selectFood, selectNum, food[i].Price, result)
+					Total := fmt.Sprintf("%v %v x %v", selectFood, selectNum, food[i].Price)
+
+					// fmt.Println("New total t",Total)
+					// fmt.Println("TTT",total)
 					newArr = append(newArr, Total)
+					fmt.Println(newArr, "Neww")
 				}
 			}
 			if selectFood == "exit" {
@@ -94,11 +98,11 @@ func Menu() {
 					OrderID: orderId,
 					Sum:     result,
 					Foods:   newArr,
+					//Quantity:
 				}
-				//fmt.Println(basket1)
 
-				basket2 = append(basket2, basket1)
-				data1, err = json.Marshal(basket2)
+				varBasket = append(varBasket, basket1)
+				data1, err = json.Marshal(varBasket)
 				if err != nil {
 					fmt.Println("Error marshaling JSON:", err)
 					return
@@ -113,26 +117,25 @@ func Menu() {
 				// for _, value := range basket2 {
 				// 	fmt.Println(value.OrderID, value.Foods, value.Sum)
 				// }
+
 				break
 			}
 		}
 	case "2":
 		fmt.Println("Receipt")
-		for _, value := range basket2 {
-			fmt.Println("Id:", value.OrderID) //value.Sum
-			for _, v1 := range value.Foods {
-				fmt.Println(v1)
+		for _, value := range varBasket {
+			fmt.Println("ID:", value.OrderID) //value.Sum
+			for _, valueFood := range value.Foods {
+				fmt.Println(valueFood)
 			}
+			fmt.Println("Total:", value.Sum)
+			//result = food[i].Price * selectNum
+			// Total := fmt.Sprintf("%v %v X  = %v", selectFood, selectNum, result)
+			// fmt.Println(Total)
 			fmt.Println()
 		}
-
-		//fmt.Println(basket2)
 	}
-
 }
-
-// lavash 4 X 21 000 = 84 000
-// haggi 4 X 21 000 = 84 000
 
 // func Sum(foodRes []string, food []Food) {
 // 	var sum int
