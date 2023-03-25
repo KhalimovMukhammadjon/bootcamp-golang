@@ -1,0 +1,37 @@
+{
+    "Books": [
+        {
+            "id": 1,
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "year": 1925,
+            "status": "given",
+            "price": 120,
+            "period": 12,
+            "category": "",
+            "page": 123
+        },
+        {
+            "id": 2,
+            "title": "Atomic Habits",
+            "author": "John Doe",
+            "year": 1998,
+            "status": "given",
+            "price": 18900,
+            "period": 0,
+            "category": "Programming",
+            "page": 210
+        },
+        {
+            "id": 3,
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "year": 1813,
+            "status": "given",
+            "price": 120,
+            "period": 12,
+            "category": "",
+            "page": 123
+        }
+    ]
+}
