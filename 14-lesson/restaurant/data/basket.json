@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "food": [
+            "Flint 5000",
+            "Shampoo 20000",
+            "Chips 27000"
+        ],
+        "sum": 27000,
+        "balance": -27000
+    },
+    {
+        "id": 2,
+        "food": [
+            "Fanta 8000",
+            "Fanta 16000"
+        ],
+        "sum": 16000,
+        "balance": -16000
+    }
+]
