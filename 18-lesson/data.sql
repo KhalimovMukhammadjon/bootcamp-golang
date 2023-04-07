@@ -46,7 +46,10 @@ INSERT INTO branch (id,name,location) values(3,'Drujba','Tashkent Drujba');
 INSERT INTO couriers (id,name,branch_id,address,car_id)values(2,'John',1,'Tashkent',1);
 
 -- join
-SELECT  FROM car_models JOIN couriers ON car_models.id =
+SELECT car_models.name, branch.name FROM couriers JOIN branch ON branch.id = couriers.branch_id
+JOIN car_models ON car_models.id = couriers.car_id;
+
+INSERT INTO couriers (id,name,branch_id,address,car_id)values(2,'John',2,'Tashkent',2);
 
 
 -- add new order to order's table
