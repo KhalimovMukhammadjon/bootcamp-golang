@@ -70,6 +70,7 @@ INSERT INTO couriers values(4,'Doe',6758908,1,2,'Ko`kcha 21 A','89434.34.884.67'
 INSERT INTO couriers values(5,'Temur',7778998,2,2,'Bukhara','812633.34.884.67','image.jpg',2,'Tahoe','80 212 TBM');
 INSERT INTO couriers values(6,'Hasan',2326776,3,2,'Jomboy','234734.34.884.67','image.jpg',2,'Hyundai','01 767 VSP');
 
+-- it is region
 CREATE TABLE region(
     id int primary key,
     name varchar(45)
