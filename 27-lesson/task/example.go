@@ -1,0 +1,7 @@
+package task
+
+
+
+func main() {
+
+}
