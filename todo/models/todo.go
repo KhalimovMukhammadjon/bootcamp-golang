@@ -17,7 +17,7 @@ type CreateTodo struct {
 }
 
 type UpdateTodo struct {
-	Id          string `json:"id"`
+	Id          int `json:"id"`
 	Title       string `json:"title"`
 	Description string `json:"description"`
 	Completed   bool   `json:"completed"`

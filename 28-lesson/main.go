@@ -85,8 +85,12 @@ func main() {
 	for i := 0; i < len(users)-3; i += 3 {
 		go cashier1(users[i], ch1)
 		u1 := <-ch1
+
 		go cashier1(users[i], ch1)
-		// u2 := <-ch1
+		u2 := <-ch1
+
+		go cashier1(users[i], ch1)
+		u3 := <-ch1
 
 		//wg.Wait()
 
@@ -100,7 +104,7 @@ func main() {
 		//wg.Add(1)
 		// wg.Add(3)
 		// wg.Wait()
-		fmt.Println(u1)
+		fmt.Println(u1, u2, u3)
 	}
 }
 

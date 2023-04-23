@@ -1,8 +1,8 @@
-create table if not exist Todo(
-    id serial primary key,
-    title varchar(50) not null,
-    description varchar(50) not null,
-    completed boolean not null default false,
-    created_at timestamp default current_timestamp,
-    updated_at timestamp default current_timestamp
+CREATE TABLE IF NOT EXISTS todo (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    description VARCHAR(50) NOT NULL,
+    completed BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

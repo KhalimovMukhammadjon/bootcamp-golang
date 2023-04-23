@@ -20,10 +20,10 @@ func SetUpAPI(r *gin.Engine, h handlers.Handler, cfg config.Config) {
 	docs.SwaggerInfo.Schemes = []string{"http", "https"}
 
 	r.POST("/todo", h.CreateTodo)
-	//r.GET("/todo", h.GetArticleList)
-	// r.GET("/articles/:id", GetByIDHandler)
+	r.GET("/todo", h.GetList)
+	r.GET("/todo/:id", h.GetListById)
 	// r.PUT("/articles/:id", UpdateHandler)
-	// r.DELETE("/articles/:id", DeleteHandler)
+	r.DELETE("/todo/:id", h.DeleteList)
 
 	//r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }

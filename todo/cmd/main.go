@@ -1,7 +1,10 @@
 package main
 
 import (
+	"Muhammadjon/bootcamp/todo/api"
+	"Muhammadjon/bootcamp/todo/api/handlers"
 	"Muhammadjon/bootcamp/todo/config"
+	"Muhammadjon/bootcamp/todo/storage/postgres"
 	"fmt"
 
 	"github.com/gin-gonic/gin"
