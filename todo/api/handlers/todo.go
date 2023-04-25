@@ -87,3 +87,27 @@ func (h *Handler) DeleteList(c *gin.Context) {
 
 	c.JSON(200, resp)
 }
+
+func (h *Handler) UpdateList(c *gin.Context) {
+	var entity models.UpdateTodo
+	
+	entity.Id = c.Param("id")
+
+	err := c.BindJSON(&entity)
+	if err != nil {
+		c.JSON(400, models.DefaultError{
+			Message: err.Error(),
+		})
+		return
+	}
+
+	resp, err := h.strg.Todo().UpdateList(entity)
+	if err != nil {
+		c.JSON(400, models.DefaultError{
+			Message: err.Error(),
+		})
+		return
+	}
+
+	c.JSON(200, resp)
+}

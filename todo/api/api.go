@@ -22,7 +22,7 @@ func SetUpAPI(r *gin.Engine, h handlers.Handler, cfg config.Config) {
 	r.POST("/todo", h.CreateTodo)
 	r.GET("/todo", h.GetList)
 	r.GET("/todo/:id", h.GetListById)
-	// r.PUT("/articles/:id", UpdateHandler)
+	r.PUT("/todo/:id", h.UpdateList)
 	r.DELETE("/todo/:id", h.DeleteList)
 
 	//r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))

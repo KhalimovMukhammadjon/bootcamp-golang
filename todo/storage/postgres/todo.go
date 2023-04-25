@@ -104,8 +104,25 @@ func (t todoRepo) DeleteList(ID string) (effectedRowsNum int64, err error) {
 	return effectedRowsNum, nil
 }
 
-func (t todoRepo) UpdateList(entity models.UpdateTodo) (effectedRowsNum int, err error) {
-	return
+func (t todoRepo) UpdateList(entity models.UpdateTodo) (effectedRowsNum int64, err error) {
+	query := `UPDATE todo SET
+				title = $2,
+				description = $3,
+				completed = $4,
+				updated_at = now()
+			WHERE id = $1`
+
+	_, err = t.db.Exec(query,
+		entity.Id,
+		entity.Title,
+		entity.Description,
+		entity.Completed,
+	)
+
+	if err != nil {
+		return effectedRowsNum, err
+	}
+	return effectedRowsNum, nil
 }
 
 // func (t todoRepo) DeleteList(ID string) (effectedRowsNum int64, err error) {
