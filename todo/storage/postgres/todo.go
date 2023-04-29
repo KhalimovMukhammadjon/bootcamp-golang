@@ -33,6 +33,8 @@ func (t todoRepo) Create(entity models.CreateTodo) (err error) {
 func (t todoRepo) GetList(query models.Query) (resp []models.Todo, err error) {
 	var rows *sql.Rows
 
+	//t.db.QueryRow()
+
 	if len(query.Search) > 0 {
 		rows, err = t.db.Query(
 			`
@@ -76,6 +78,7 @@ func (t todoRepo) GetListById(ID string) (resp models.Todo, err error) {
 	get, err := t.db.Prepare(`SELECT id, title, description, completed, created_at, updated_at 
 	from todo
 	WHERE id = $1`)
+
 	if err != nil {
 		return resp, err
 	}

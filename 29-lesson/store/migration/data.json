@@ -1,0 +1,9 @@
+{
+    "name":"iPhone",
+    "version":14,
+    "description":"14 Pro LLA 256 GB",
+    "atributes":{
+        "color":["black","green","yellow"],
+        "storage":[128,256,512]
+    }
+}

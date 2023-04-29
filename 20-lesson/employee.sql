@@ -48,8 +48,13 @@ SELECT *from employee where salary > 600;
 
 
 
+SELECT author.firstname, author.lastname, count(article.author_id) from author 
+JOIN article on  author.id = article.author_id GROUP BY author_id ORDER BY count DESC limit 1;
 
-
+SELECT author.firstname, COUNT(article.author_id)
+FROM author
+JOIN article ON article.author_id = author.id
+GROUP BY author.id;
 
 
 
