@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "firstname": "John",
+        "lastname": "Doe",
+        "age": 21,
+        "country": "USA"
+    },
+    {
+        "id": 2,
+        "firstname": "Husan",
+        "lastname": "Rustamov",
+        "age": 20,
+        "country": "Uzbekistan"
+    },
+    {
+        "id": 3,
+        "firstname": "Ali",
+        "lastname": "Umarov",
+        "age": 23,
+        "country": "Uzbekistan"
+    }
+]

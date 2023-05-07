@@ -1,0 +1,151 @@
+definitions:
+  models.Actors:
+    properties:
+      age:
+        type: integer
+      country:
+        type: string
+      created_at:
+        type: string
+      firstname:
+        type: string
+      id:
+        type: string
+      lastname:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.CreateActor:
+    properties:
+      age:
+        type: integer
+      country:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+    type: object
+  models.DefaultError:
+    properties:
+      message:
+        type: string
+    type: object
+  models.SuccessResponse:
+    properties:
+      data: {}
+      message:
+        type: string
+    type: object
+  models.UpdateActor:
+    properties:
+      age:
+        type: integer
+      country:
+        type: string
+      first_name:
+        type: string
+      id:
+        type: string
+      lastname:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: This is a sample article demo.
+  termsOfService: https://udevs.io
+paths:
+  /actor:
+    get:
+      consumes:
+      - application/json
+      description: get all actors
+      operationId: get-all-handler
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        required: true
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        required: true
+        type: integer
+      - description: search
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Actors'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DefaultError'
+      summary: List actor
+      tags:
+      - actors
+    post:
+      consumes:
+      - application/json
+      description: Create Actor By Given Info
+      operationId: create-actor-handler
+      parameters:
+      - description: Actor Body
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateActor'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  type: string
+              type: object
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DefaultError'
+      summary: Create Actor
+  /actor/update:
+    put:
+      consumes:
+      - application/json
+      description: update actor
+      operationId: update-actor
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateActor'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Actors'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DefaultError'
+      summary: Update actor
+      tags:
+      - actors
+swagger: "2.0"

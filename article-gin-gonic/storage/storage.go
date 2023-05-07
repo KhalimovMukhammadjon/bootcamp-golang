@@ -1,6 +1,6 @@
 package storage
 
-import "bootcamp/article/models"
+import "Muhammadjon/bootcamp/article-gin-gonic/models"
 
 type StorageI interface {
 	Article() ArticleRepoI

@@ -8,10 +8,10 @@ type StorageI interface {
 
 type BookRepoI interface {
 	Create(entity models.CreateBook) (err error)
-	GetList() (resp []models.Book, err error)
-	GetListById(ID string) (resp models.Book, err error)
-	UpdateList(entity models.UpdateBook) (effectedRowsNum int64, err error)
-	DeleteList(ID string) (effectedRowsNum int64, err error)
+	// GetList() (resp []models.Book, err error)
+	// GetListById(ID string) (resp models.Book, err error)
+	// UpdateList(entity models.UpdateBook) (effectedRowsNum int64, err error)
+	// DeleteList(ID string) (effectedRowsNum int64, err error)
 }
 
 // type MovieRepoI interface {

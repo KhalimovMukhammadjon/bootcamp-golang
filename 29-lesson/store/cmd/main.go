@@ -21,20 +21,20 @@ import (
 var phones []m.Product
 
 func GetProduct(c *gin.Context) {
-	var products []m.Product
-	for _, product := range m.Product {
-		if product.Type == productType {
-			products = append(products, product)
-		}
-	}
-	return products
-	c.JSON(http.StatusOK, phones)
-	// phones = []m.Product{
-	// 	m.Product{ID: 1,
-	// 		Name:        "iPhone 13 Pro",
-	// 		Description: "",
-	// 		Price:       999.00,
-	// 		Attributes: map[string][]string{
+	// var products []m.Product
+	// for _, product := range m.Product {
+	// 	if product.Type == productType {
+	// 		products = append(products, product)
+	// 	}
+	// }
+	// return products
+	// c.JSON(http.StatusOK, phones)
+	// // phones = []m.Product{
+	// // 	m.Product{ID: 1,
+	// // 		Name:        "iPhone 13 Pro",
+	// // 		Description: "",
+	// // 		Price:       999.00,
+	// // 		Attributes: map[string][]string{
 
 	// 		},
 	// 			{"color":  "Silver",}

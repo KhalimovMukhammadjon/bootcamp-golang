@@ -28,3 +28,36 @@ func SetUpAPI(r *gin.Engine, h handlers.Handler, cfg config.Config) {
 	//r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
 
+
+/*
+insert := `INSERT INTO stadium(
+  stadium_name,
+  available_time_start,
+  available_time_end,
+  price_p_hour,
+  rating,
+  images,
+  location
+) VALUES(
+  $1,
+  $2,
+  $3,
+  $4,
+  $5,
+  $6,
+  $7::jsonb
+)`
+
+_, err = db.Exec(insert,
+  entity.StadiumName,
+  entity.AvailableTimeStart,
+  entity.AvailableTimeEnd,
+  entity.PricePerHour,
+  entity.Rating,
+  entity.Images,
+  entity.Location.ToJSON(),
+)
+
+return err
+
+*/

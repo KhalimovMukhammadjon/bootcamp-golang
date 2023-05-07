@@ -2,7 +2,7 @@ package postgres
 
 import (
 	"Muhammadjon/bootcamp/book/models"
-	"Muhammadjon/bootcamp/book/storage"
+	//"Muhammadjon/bootcamp/book/storage"
 	"context"
 
 	"github.com/google/uuid"
@@ -13,11 +13,11 @@ type bookRepo struct {
 	db *pgxpool.Pool
 }
 
-func NewBookRepo(db *pgxpool.Pool) storage.BookRepoI {
-	return *bookRepo{
-		db: db,
-	}
-}
+// func NewBookRepo(db *pgxpool.Pool) storage.BookRepoI {
+// 	return *bookRepo{
+// 		db: db,
+// 	}
+// }
 
 func (t bookRepo) Create(ctx context.Context, entity models.CreateBook) (err error) {
 	insertQuery := `INSERT INTO todo(
